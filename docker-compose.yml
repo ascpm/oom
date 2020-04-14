@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  memory:
+    image: io.kabang.ext/memory:0.1.0
+    container_name: memory
+    ports:
+      - "8080:8080"
+    networks:
+      - memory
+    restart: always
+
+networks:
+  memory:
+    driver: bridge
+    external: false
