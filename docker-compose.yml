@@ -1,9 +1,10 @@
-version: '3'
+version: '2'
 
 services:
   memory:
     image: io.kabang.ext/memory:0.1.0
     container_name: memory
+    oom_score_adj: -1000
     ports:
       - "8080:8080"
     networks:
